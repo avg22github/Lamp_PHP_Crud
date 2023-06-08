@@ -196,6 +196,5 @@ if (isset($_GET['logout'])) {
             </div>
         </div>
     </div>
-	<a href="logout.php" class="btn btn-danger" style="float:right; margin-right: 20px;"><i class="material-icons">&#xE879;</i> <span>Cerrar Sesión</span></a>
 </body>
 </html>
