@@ -15,7 +15,7 @@ if (isset($_GET['logout'])) {
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>User Data</title>
+    <title>Lista Clientes</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto|Varela+Round">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -37,7 +37,7 @@ if (isset($_GET['logout'])) {
                     <div class="col-sm-6">
                         <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Añadir Cliente</span></a>
                         <a href="JavaScript:void(0);" class="btn btn-danger" id="delete_multiple"><i class="material-icons">&#xE15C;</i> <span>Eliminar</span></a>
-                        <a href="index.php?logout=true" class="btn btn-primary" style="float:right;">Cerrar Sesión</a>
+                        <a href="index.php?logout=true" class="btn btn-primary" style="float:right;"><i class="material-icons">&#xE879;</i> <span>Cerrar Sesión</span></a>>Cerrar Sesión</a>
                     </div>
                 </div>
             </div>
