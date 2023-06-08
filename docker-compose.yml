@@ -1,0 +1,49 @@
+version: "3"
+
+networks:
+  internal:
+    driver: bridge
+volumes:
+  web:
+
+services:
+  apache:
+    container_name: apache
+    build: .
+    hostname: apache
+    ports:
+      - "80:80"
+    networks:
+      - internal
+    depends_on:
+      - db
+    volumes:
+      - web
+      - ./php_crud_example:/var/www/html
+
+  db:
+    container_name: bd
+    image: mysql
+    networks:
+      - internal
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: bolson
+      MYSQL_DATABASE: example
+      MYSQL_USER: frodo
+      MYSQL_PASSWORD: bolson
+    volumes:
+      - /home/copias:/root
+    ports:
+      - "3307:3306"
+  
+  phpmyadmin:
+    image: phpmyadmin
+    restart: always
+    networks:
+    - internal
+    ports:
+      - 8080:80
+    environment:
+      - PMA_ARBITRARY=1
+
