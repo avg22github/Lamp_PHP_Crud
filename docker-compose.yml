@@ -33,7 +33,7 @@ services:
       MYSQL_USER: frodo
       MYSQL_PASSWORD: bolson
     volumes:
-      - /home/copias:/root
+      - /home/mysql_backups:/root
     ports:
       - "3307:3306"
   
