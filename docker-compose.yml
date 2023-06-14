@@ -11,6 +11,7 @@ services:
     container_name: apache
     build: .
     hostname: apache
+    restart: always
     ports:
       - "80:80"
     networks:
